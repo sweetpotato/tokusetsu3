@@ -129,6 +129,15 @@
 
   <meta name="text:08 l Footer Text" content="" />
 
+  <meta name="text:09 l Errata01 Page" content="" />
+  <meta name="text:09 l Errata01 Where" content="" />
+  <meta name="text:09 l Errata01 Wrong" content="" />
+  <meta name="text:09 l Errata01 Right" content="" />
+  <meta name="text:09 l Errata02 Page" content="" />
+  <meta name="text:09 l Errata02 Where" content="" />
+  <meta name="text:09 l Errata02 Wrong" content="" />
+  <meta name="text:09 l Errata02 Right" content="" />
+
   <title>{block:PostTitle}{PostTitle} | {/block:PostTitle}{Title}{block:IndexPage}{block:If03lCircleName} | {text:03 l Circle Name}{/block:If03lCircleName}{/block:IndexPage}</title>
 
   <meta name="viewport" content="width=device-width">
@@ -693,6 +702,37 @@ style="background-color: {color:Accent};"
   </div>
 </section>
 {block:IfBannerImage}
+
+{block:If09lErrata01Page}
+<section class="l-section section-errata">
+  <div class="l-container">
+    <header class="section-header">
+      <h2>ERRATA</h2>
+    </header>
+    <div class="section-content">
+      <table class="errata">
+        <thead><tr><th>ページ</th><th>箇所</th><th>誤</th><th>正</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="page">{text:09 l Errata01 Page}</td>
+            <td class="where">{text:09 l Errata01 Where}</td>
+            <td class="wrong">{text:09 l Errata01 Wrong}</td>
+            <td class="right">{text:09 l Errata01 Right}</td>
+          </tr>
+          {block:If09lErrata02Page}
+          <tr>
+            <td class="page">{text:09 l Errata02 Page}</td>
+            <td class="where">{text:09 l Errata02 Where}</td>
+            <td class="wrong">{text:09 l Errata02 Wrong}</td>
+            <td class="right">{text:09 l Errata02 Right}</td>
+          </tr>
+          {/block:If09lErrata02Page}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+{/block:If09lErrata01Page}
 
 {block:If01lEnableShareButtons}
 <section class="l-section section-share">
